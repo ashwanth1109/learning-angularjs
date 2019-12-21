@@ -98,3 +98,21 @@ angular.module("controllers", []).controller("MainController1", [
   }
 ]);
 ```
+
+### Handling Click Events using ng-click
+
+```html
+<div ng-controller="MainController">
+  <div>
+    {{isButtonClicked ? 'Button is clicked' : 'Button is not clicked'}}
+  </div>
+  <button ng-click="handleClick()">Click me!</button>
+</div>
+```
+
+```js
+$scope.isButtonClicked = false;
+$scope.handleClick = function() {
+  $scope.isButtonClicked = true;
+};
+```
