@@ -9,6 +9,10 @@
   <body>
     <h1>Hello world</h1>
 
+    <div ng-controller="MainController1">
+      {{val}}
+    </div>
+
     <div ng-controller="MainController">
       {{greeting}} {{name()}}
 
@@ -16,10 +20,13 @@
         {{isButtonClicked ? 'Button is clicked' : 'Button is not clicked'}}
       </div>
       <button ng-click="handleClick()">Click me!</button>
-    </div>
 
-    <div ng-controller="MainController1">
-      {{val}}
+      <hr />
+
+      <div>{{val}}</div>
+      <button ng-click="increment()">Increment</button>
+      <div ng-show="isEven()">Value is even</div>
+      <div ng-hide="isEven()">Value is odd</div>
     </div>
   </body>
 </html>

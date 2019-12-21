@@ -12,6 +12,15 @@ app.controller("MainController", [
     $scope.handleClick = function() {
       $scope.isButtonClicked = true;
     };
+
+    $scope.val = 1;
+    $scope.increment = function() {
+      $scope.val += 1;
+    };
+
+    $scope.isEven = function() {
+      return $scope.val % 2 === 0;
+    };
   }
 ]);
 
