@@ -55,3 +55,23 @@ A software architectural pattern that separates the representation of informatio
 ```js
 const app = angular.module("app", []);
 ```
+
+### Defining a controller
+
+```html
+<div ng-controller="MainController">
+  {{greeting}} {{name()}}
+</div>
+```
+
+```js
+app.controller("MainController", [
+  "$scope",
+  function($scope) {
+    $scope.greeting = "Hola,";
+    $scope.name = function() {
+      return "Ashwanth" + " " + "A R";
+    };
+  }
+]);
+```
