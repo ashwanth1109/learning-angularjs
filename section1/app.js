@@ -1,4 +1,4 @@
-const app = angular.module("app", []);
+const app = angular.module("app", ["controllers"]);
 
 app.controller("MainController", [
   "$scope",
@@ -7,5 +7,12 @@ app.controller("MainController", [
     $scope.name = function() {
       return "Ashwanth" + " " + "A R";
     };
+  }
+]);
+
+angular.module("controllers", []).controller("MainController1", [
+  "$scope",
+  function($scope) {
+    $scope.val = "This is MainController1";
   }
 ]);
