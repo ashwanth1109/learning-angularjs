@@ -138,3 +138,18 @@ $scope.isEven = function() {
 ```
 
 Note: Considered a bad practice to call a function in state directives such as show or hide. This can lead to performance degradation.
+
+### Improved way of using ng-show and ng-hide
+
+```html
+<div ng-show="isEven">Value is even</div>
+<div ng-hide="isEven">Value is odd</div>
+```
+
+```js
+$scope.val = 1;
+$scope.increment = function() {
+  $scope.val += 1;
+  $scope.isEven = $scope.val % 2 === 0;
+};
+```
