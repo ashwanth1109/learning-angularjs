@@ -16,10 +16,7 @@ app.controller("MainController", [
     $scope.val = 1;
     $scope.increment = function() {
       $scope.val += 1;
-    };
-
-    $scope.isEven = function() {
-      return $scope.val % 2 === 0;
+      $scope.isEven = $scope.val % 2 === 0;
     };
   }
 ]);
