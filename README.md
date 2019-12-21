@@ -116,3 +116,23 @@ $scope.handleClick = function() {
   $scope.isButtonClicked = true;
 };
 ```
+
+### Showing/Hiding using ng-show and ng-hide
+
+```html
+<div>{{val}}</div>
+<button ng-click="increment()">Increment</button>
+<div ng-show="isEven()">Value is even</div>
+<div ng-hide="isEven()">Value is odd</div>
+```
+
+```js
+$scope.val = 1;
+$scope.increment = function() {
+  $scope.val += 1;
+};
+
+$scope.isEven = function() {
+  return $scope.val % 2 === 0;
+};
+```
