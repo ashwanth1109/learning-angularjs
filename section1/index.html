@@ -11,6 +11,11 @@
 
     <div ng-controller="MainController">
       {{greeting}} {{name()}}
+
+      <div>
+        {{isButtonClicked ? 'Button is clicked' : 'Button is not clicked'}}
+      </div>
+      <button ng-click="handleClick()">Click me!</button>
     </div>
 
     <div ng-controller="MainController1">

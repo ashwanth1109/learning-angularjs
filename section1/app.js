@@ -7,6 +7,11 @@ app.controller("MainController", [
     $scope.name = function() {
       return "Ashwanth" + " " + "A R";
     };
+
+    $scope.isButtonClicked = false;
+    $scope.handleClick = function() {
+      $scope.isButtonClicked = true;
+    };
   }
 ]);
 
