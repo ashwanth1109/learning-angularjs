@@ -58,11 +58,15 @@ const app = angular.module("app", []);
 
 ### Defining a controller
 
+Interpolation of variables inside the controller
+
 ```html
 <div ng-controller="MainController">
   {{greeting}} {{name()}}
 </div>
 ```
+
+Adding behavior/functionality to the controller
 
 ```js
 app.controller("MainController", [
