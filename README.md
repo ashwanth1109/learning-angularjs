@@ -36,3 +36,22 @@ A software architectural pattern that separates the representation of informatio
 - ng-app: Auto bootstrapping AngularJS (designates the root element of the application)
 - You can interpolate values using {{}}
 - ng-controller: attaches a controller class to the view
+
+### Importing AngularJS into the app
+
+```html
+<html ng-app="app">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"
+    ></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body></body>
+</html>
+```
+
+```js
+const app = angular.module("app", []);
+```
