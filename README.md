@@ -79,3 +79,22 @@ app.controller("MainController", [
   }
 ]);
 ```
+
+### Modularizing a controller (prefer this pattern in production)
+
+```html
+<div ng-controller="MainController1">
+  {{val}}
+</div>
+```
+
+```js
+const app = angular.module("app", ["controllers"]); // dependancy injection
+
+angular.module("controllers", []).controller("MainController1", [
+  "$scope",
+  function($scope) {
+    $scope.val = "This is MainController1";
+  }
+]);
+```
