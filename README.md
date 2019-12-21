@@ -136,3 +136,5 @@ $scope.isEven = function() {
   return $scope.val % 2 === 0;
 };
 ```
+
+Note: Considered a bad practice to call a function in state directives such as show or hide. This can lead to performance degradation.
