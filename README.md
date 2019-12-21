@@ -1,3 +1,5 @@
+# Introduction
+
 ## Model View Controller
 
 A software architectural pattern that separates the representation of information from the user's interaction with it.
@@ -28,3 +30,9 @@ A software architectural pattern that separates the representation of informatio
 
 - Source code is well commented and readable (consumable)
 - Error messages are bad
+
+# Section 1:
+
+- ng-app: Auto bootstrapping AngularJS (designates the root element of the application)
+- You can interpolate values using {{}}
+- ng-controller: attaches a controller class to the view
