@@ -1,5 +1,8 @@
-angular.module("app", []);
+const app = angular.module("app", []);
 
-var MainController = function($scope) {
-  $scope.val = "Test123";
-};
+app.controller("MainController", [
+  "$scope",
+  function($scope) {
+    $scope.greeting = "Hola!";
+  }
+]);
