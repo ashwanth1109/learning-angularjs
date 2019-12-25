@@ -28,5 +28,20 @@
       <div ng-show="isEven">Value is even</div>
       <div ng-hide="isEven">Value is odd</div>
     </div>
+
+    <hr />
+    <div ng-controller="ListController">
+      <div ng-repeat="element in myArr track by $index">
+        {{element}}: {{$index}} element {{$start}} {{$middle}} {{$last}}
+        {{$even}} {{$odd}}
+      </div>
+      <hr />
+      <div ng-repeat-start="user in users">
+        <strong>{{user.name}}</strong>: {{user.age}}
+      </div>
+      <hr ng-repeat-end />
+
+      <div ng-repeat="attr in heroes">{{attr}}</div>
+    </div>
   </body>
 </html>
