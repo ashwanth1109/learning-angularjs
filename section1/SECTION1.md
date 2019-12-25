@@ -120,3 +120,39 @@ $scope.increment = function() {
   $scope.isEven = $scope.val % 2 === 0;
 };
 ```
+
+### ng-repeat
+
+```html
+<div ng-controller="ListController">
+  <div ng-repeat="element in myArr track by $index">
+    {{element}}: {{$index}} element {{$start}} {{$middle}} {{$last}} {{$even}}
+    {{$odd}}
+  </div>
+  <hr />
+  <div ng-repeat-start="user in users">
+    <strong>{{user.name}}</strong>: {{user.age}}
+  </div>
+  <hr ng-repeat-end />
+
+  <div ng-repeat="attr in heroes">{{attr}}</div>
+</div>
+```
+
+```js
+app.controller("ListController", [
+  "$scope",
+  function($scope) {
+    $scope.myArr = [1, 2, 3, 4, 5, 5];
+    $scope.users = [
+      { name: "Mike", age: 23 },
+      {
+        name: "Andy",
+        age: 34
+      },
+      { name: "Reid", age: 45 }
+    ];
+    $scope.heroes = { name: "Kunkka", attack: "Melee", type: "Strength" };
+  }
+]);
+```
