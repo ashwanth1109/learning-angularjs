@@ -1,0 +1,30 @@
+<html ng-app="app">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"
+    ></script>
+    <script type="text/javascript" src="app.js"></script>
+    <style type="text/css">
+      .orange {
+        color: orange;
+      }
+      .italic {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="orange italic">Hello World</h1>
+
+    <h1 ng-class="['orange', 'italic']">Hello ng class</h1>
+
+    <div ng-controller="Controller1">
+      <h1 ng-class="[classVar1, classVar2]">Hello Class Vars</h1>
+      <hr />
+      <h1 ng-class="{orange: isOrange, italic: isItalic}">
+        Hello class toggle
+      </h1>
+    </div>
+  </body>
+</html>
