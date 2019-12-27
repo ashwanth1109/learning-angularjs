@@ -12,3 +12,7 @@ app.controller("Controller1", [
     $scope.isItalic = true;
   }
 ]);
+
+app.controller("Controller2", ["$scope", function($scope) {}]);
+
+app.controller("SubController", ["$scope", function($scope) {}]);

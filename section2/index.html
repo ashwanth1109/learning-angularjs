@@ -15,7 +15,7 @@
     </style>
   </head>
   <body>
-    <h1 class="orange italic">Hello World</h1>
+    <!-- <h1 class="orange italic">Hello World</h1>
 
     <h1 ng-class="['orange', 'italic']">Hello ng class</h1>
 
@@ -25,6 +25,21 @@
       <h1 ng-class="{orange: isOrange, italic: isItalic}">
         Hello class toggle
       </h1>
+    </div> -->
+
+    <div ng-controller="Controller2">
+      <input ng-model="mydata" />
+      <input ng-model="mydata" />
+      <input ng-model="mydata" />
+      <h1>{{mydata}}</h1>
+      <input type="text" ng-model="mydata1.val" />
+      <button ng-click="mydata='123'">123</button>
+      <div ng-controller="SubController">
+        <input ng-model="mydata" />
+        <h1>{{mydata}}</h1>
+        <h1>{{mydata1.val}}</h1>
+        <input type="text" ng-model="mydata1.val" />
+      </div>
     </div>
   </body>
 </html>
