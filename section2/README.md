@@ -50,3 +50,45 @@ function($scope) {
     $scope.isItalic = true;
 }
 ```
+
+### ng-model
+
+Model input to data:
+
+```html
+<input ng-model="mydata" />
+<input ng-model="mydata" />
+<h1>{{mydata}}</h1>
+<h1>{{mydata}}</h1>
+<button ng-click="mydata='123'">123</button>
+```
+
+Note, you can have several instances of the variable which will all update.
+You can use a button to update the value through javascript assignment.
+
+Inheritance of model into a sub controller:
+
+```html
+<div ng-controller="Controller2">
+  <input ng-model="mydata" />
+  <h1>{{mydata}}</h1>
+  <div ng-controller="SubController">
+    <input ng-model="mydata" />
+    <h1>{{mydata}}</h1>
+  </div>
+</div>
+```
+
+Here, changing value in Controller2 is reflected in all places. But as soon as you change the value in the SubController, Angular instantiates a new instance for the SubController and changes will not be reflected outside. Further changes outside will not be reflected inside.
+
+To circumvent this problem, you can use the object dot notation as follows:
+
+```html
+<div ng-controller="Controller2">
+  <input type="text" ng-model="mydata1.val" />
+  <div ng-controller="SubController">
+    <input type="text" ng-model="mydata1.val" />
+    <h1>{{mydata1.val}}</h1>
+  </div>
+</div>
+```
